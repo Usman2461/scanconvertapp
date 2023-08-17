@@ -21,7 +21,7 @@ class ConverterScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(appBarColor),
-        title: Text("File Reader", style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text("All Files", style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -35,7 +35,7 @@ class ConverterScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>PDFListScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>showAllFiles()));
               },
               child: GridTile(
                 child: Column(
