@@ -1,4 +1,4 @@
-# scanconvertapp
+# converter
 
 A new Flutter project.
 

@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.qutech" "\0"
-            VALUE "FileDescription", "scanconvertapp" "\0"
+            VALUE "CompanyName", "com.example" "\0"
+            VALUE "FileDescription", "converter" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "scanconvertapp" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.qutech. All rights reserved." "\0"
-            VALUE "OriginalFilename", "scanconvertapp.exe" "\0"
-            VALUE "ProductName", "scanconvertapp" "\0"
+            VALUE "InternalName", "converter" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "converter.exe" "\0"
+            VALUE "ProductName", "converter" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

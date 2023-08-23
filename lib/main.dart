@@ -1,38 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:scanconvertapp/screens/splash_screen/splash_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-import 'constants/colors.dart';
+import 'app/data/local/my_shared_pref.dart';
+import 'app/routes/app_pages.dart';
+import 'config/theme/my_theme.dart';
+import 'config/translations/localization_service.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+Future<void> main() async {
+  // wait for bindings
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  // init shared preference
+  await MySharedPref.init();
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    final defaultTextStyle = TextStyle(
-      color: Colors.white, // Set your desired text color here
-    );
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-        textTheme: TextTheme(
-          bodyLarge: defaultTextStyle,
-          bodyMedium: defaultTextStyle,
-          titleLarge: TextStyle(
-            color: Colors.white,
-          ),
-          displayLarge: defaultTextStyle,
-        ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)
-            .copyWith(background: Color(appBackgroundColor)),
-      ),
-      home: SplashScreen(),
-    );
-  }
+  runApp(
+    ScreenUtilInit(
+      designSize: const Size(390, 844),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      useInheritedMediaQuery: true,
+      rebuildFactor: (old, data) => true,
+      builder: (context, widget) {
+        return GetMaterialApp(
+          title: "Grocery App",
+          useInheritedMediaQuery: true,
+          debugShowCheckedModeBanner: false,
+          builder: (context,widget) {
+            bool themeIsLight = MySharedPref.getThemeIsLight();
+            return Theme(
+              data: MyTheme.getThemeData(isLight: themeIsLight),
+              child: MediaQuery(
+                data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                child: widget!,
+              ),
+            );
+          },
+          initialRoute: AppPages.INITIAL, //
+          onGenerateRoute: AppPages.generateRoute,// first screen to show when app is running// app screens
+          locale: MySharedPref.getCurrentLocal(), // app language
+          translations: LocalizationService.getInstance(), // localization services in app (controller app language)
+        );
+      },
+    ),
+  );
 }
