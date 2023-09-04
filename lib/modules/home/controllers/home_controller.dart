@@ -16,7 +16,6 @@ class HomeController extends GetxController {
   var isLightTheme = MySharedPref.getThemeIsLight();
 
   // for home screen cards
-  var cards = [Constants.card1, Constants.card2, Constants.card3];
 
   @override
   void onInit() {

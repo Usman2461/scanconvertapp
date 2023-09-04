@@ -4,7 +4,11 @@ class Constants {
 
   // assets images
   static const logo = 'assets/images/app_icon.png';
-
+  static const textIcon = 'assets/icons/textimg.svg';
+  static const tableIcon = 'assets/icons/tablescan.svg';
+  static const readIcon = 'assets/icons/read.svg';
+  static const qrIcon = 'assets/icons/qrcode.svg';
+  static const contactIcon = 'assets/icons/contact.svg';
   static const homeIcon = 'assets/vectors/home.svg';
   static const homeNewIcon = 'assets/vectors/homeNew.svg';
   static const converterIcon = 'assets/vectors/converter.svg';
@@ -51,31 +55,12 @@ class Constants {
   static const emojiIcon = 'assets/vectors/emoji.svg';
   static const container = 'assets/vectors/container.svg';
 
-  static const apple = 'assets/vectors/apple.svg';
-  static const broccoli = 'assets/vectors/broccoli.svg';
-  static const cheese = 'assets/vectors/cheese.svg';
-  static const meat = 'assets/vectors/meat.svg';
 
   static const background = 'assets/images/background.png';
   static const backgroundDark = 'assets/images/background_dark.png';
   static const avatar = 'assets/images/avatar.png';
-  static const calendar = 'assets/images/calendar.png';
-  static const lotus = 'assets/images/lotus.png';
   static const matches = 'assets/images/matches.png';
   static const favourites = 'assets/images/favourites.png';
 
-  static const lambMeat = 'assets/images/lamb_meat.png';
-  static const bellPepper = 'assets/images/bell_pepper.png';
-  static const cabbage = 'assets/images/cabbage.png';
-  static const carrot = 'assets/images/carrot.png';
-  static const cauliflower = 'assets/images/cauliflower.png';
-  static const ginger = 'assets/images/ginger.png';
-  static const pumpkin = 'assets/images/pumpkin.png';
-  static const spinach = 'assets/images/spinach.png';
-  static const tomatoes = 'assets/images/tomatoes.png';
-
-  static const card1 = 'assets/images/card1.png';
-  static const card2 = 'assets/images/card2.png';
-  static const card3 = 'assets/images/card3.png';
 
 }

@@ -9,6 +9,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import '../../../app/components/no_data.dart';
+import '../../../utils/constants.dart';
+import '../../../widgets/textIconButton.dart';
 class ScannerView extends StatefulWidget {
   const ScannerView({super.key});
 
@@ -60,6 +62,7 @@ class _ScannerViewState extends State<ScannerView> {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: const Text('File Scanner'),
         ),
@@ -98,16 +101,81 @@ class _ScannerViewState extends State<ScannerView> {
             )
           ],
         ),
-        bottomNavigationBar: TabBar(
-          labelStyle: TextStyle(fontSize: 8),
-          indicatorPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          tabs: [
-            Tab(text: 'ACTIONS',),
-            Tab(text: 'DOCUMENT'),
-            Tab(text: 'WHITEBOARD'),
-            Tab(text: 'BUSINESS CARD'),
-            Tab(text: 'PHOTO'),
-          ],
+        bottomNavigationBar: SizedBox(
+          height: 128,
+          child: Column(
+            children: [
+              Container(
+                color: Color(0xFF181818),
+                height: 80,
+                child: TabBarView(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    TextIconButton(text: 'Text', iconData: Constants.textIcon,),
+                    TextIconButton(text: 'Table', iconData: Constants.tableIcon,),
+                    TextIconButton(text: 'Read', iconData: Constants.readIcon,),
+                    TextIconButton(text: 'Contact', iconData: Constants.contactIcon,),
+                    TextIconButton(text: 'QR Code', iconData: Constants.qrIcon,),
+                  ],),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    TextIconButton(text: 'Text', iconData: Constants.textIcon,),
+                    TextIconButton(text: 'Table', iconData: Constants.tableIcon,),
+                    TextIconButton(text: 'Read', iconData: Constants.readIcon,),
+                    TextIconButton(text: 'Contact', iconData: Constants.contactIcon,),
+                    TextIconButton(text: 'QR Code', iconData: Constants.qrIcon,),
+                  ],),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    TextIconButton(text: 'Text', iconData: Constants.textIcon,),
+                    TextIconButton(text: 'Table', iconData: Constants.tableIcon,),
+                    TextIconButton(text: 'Read', iconData: Constants.readIcon,),
+                    TextIconButton(text: 'Contact', iconData: Constants.contactIcon,),
+                    TextIconButton(text: 'QR Code', iconData: Constants.qrIcon,),
+                  ],),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    TextIconButton(text: 'Text', iconData: Constants.textIcon,),
+                    TextIconButton(text: 'Table', iconData: Constants.tableIcon,),
+                    TextIconButton(text: 'Read', iconData: Constants.readIcon,),
+                    TextIconButton(text: 'Contact', iconData: Constants.contactIcon,),
+                    TextIconButton(text: 'QR Code', iconData: Constants.qrIcon,),
+                  ],),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    TextIconButton(text: 'Text', iconData: Constants.textIcon,),
+                    TextIconButton(text: 'Table', iconData: Constants.tableIcon,),
+                    TextIconButton(text: 'Read', iconData: Constants.readIcon,),
+                    TextIconButton(text: 'Contact', iconData: Constants.contactIcon,),
+                    TextIconButton(text: 'QR Code', iconData: Constants.qrIcon,),
+                  ],),
+                ]),
+              ),
+              Container(
+                color: Color(0xEF232222),
+                child: TabBar(
+                  indicatorColor: Color(0xFFEA3434),
+                  labelColor: Color(0xFFEA3434),
+                  labelStyle: TextStyle(fontSize: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 1.0),
+                  indicatorPadding: EdgeInsets.symmetric(horizontal: 0.0),
+                  labelPadding: EdgeInsets.symmetric(horizontal: 1.0),
+                  tabs: [
+                    Tab(text: 'ACTIONS',),
+                    Tab(text: 'DOCUMENT'),
+                    Tab(text: 'WHITEBOARD'),
+                    Tab(text: 'BUSINESS CARD'),
+                    Tab(text: 'PHOTO'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
