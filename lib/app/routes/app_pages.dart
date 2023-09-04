@@ -1,5 +1,6 @@
 import 'package:converter/modules/recent/views/recent_view.dart';
 import 'package:converter/modules/scanner/views/scanner_view.dart';
+import 'package:converter/modules/settings/views/privacy_policy.dart';
 import 'package:flutter/material.dart';
 import '../../modules/base/views/base_view.dart';
 import '../../modules/converter/views/converter_view.dart';
@@ -17,6 +18,7 @@ class AppPages {
   static const String scanner = _Paths.SCANNER;
   static const String recent = _Paths.RECENT;
   static const String setting = _Paths.SETTINGS;
+  static const String privacyPolicy = _Paths.PRIVACY;
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -34,6 +36,8 @@ class AppPages {
         return MaterialPageRoute(builder: (_) => RecentView());
       case setting:
         return MaterialPageRoute(builder: (_) => SettingsView());
+      case privacyPolicy:
+        return MaterialPageRoute(builder: (_) => PrivacyPolicy());
       default:
         return MaterialPageRoute(builder: (_) => BaseView());
     }

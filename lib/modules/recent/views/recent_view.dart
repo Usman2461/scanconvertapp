@@ -18,9 +18,10 @@ class _RecentViewState extends State<RecentView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('File Picker'),
+        title: Text('Recent Files'),
       ),
       body: Center(
+        child: Text("Currently, No Recent Files Found"),
       ),
     );
   }

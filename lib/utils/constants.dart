@@ -43,7 +43,7 @@ class Constants {
   static const versionIcon = 'assets/icons/version_icon.svg';
   static const sortIcon = 'assets/icons/sort_icon.svg';
   static const selectionIcon = 'assets/icons/selection_icon.svg';
-  static const searchIcon2 = 'assets/icons/search_icon.svg';
+  static const searchIcon2 = 'assets/icons/search_icon.png';
   static const themeIcon = 'assets/vectors/theme.svg';
   static const basketIcon = 'assets/vectors/basket.svg';
   static const cornIcon = 'assets/vectors/corn.svg';

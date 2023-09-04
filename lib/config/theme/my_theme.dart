@@ -15,7 +15,7 @@ class MyTheme {
         primaryColorLight: isLight ? LightThemeColors.primaryColorLight : DarkThemeColors.primaryColorLight,
         primaryColorDark: isLight ? LightThemeColors.primaryColorDark : DarkThemeColors.primaryColorDark,
         // secondary color (for checkbox,float button, radio..etc)
-        accentColor: isLight ? LightThemeColors.accentColor : DarkThemeColors.accentColor,
+        // accentColor: isLight ? LightThemeColors.accentColor : DarkThemeColors.accentColor,
         // color contrast (if the theme is dark text should be white for example)
         brightness: isLight ? Brightness.light : Brightness.dark,
         // canvas Color

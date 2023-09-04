@@ -59,7 +59,7 @@ class _ScannerViewState extends State<ScannerView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Document Scanner Demo'),
+        title: const Text('File Scanner'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

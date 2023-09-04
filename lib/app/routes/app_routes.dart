@@ -11,6 +11,7 @@ abstract class Routes {
   static const SCANNER = _Paths.SCANNER;
   static const RECENT = _Paths.RECENT;
   static const SETTINGS = _Paths.SETTINGS;
+  static const PRIVACY = _Paths.PRIVACY;
 }
 
 abstract class _Paths {
@@ -23,4 +24,6 @@ abstract class _Paths {
   static const SCANNER = '/scanner';
   static const RECENT = '/recent';
   static const SETTINGS = '/settings';
+  static const PRIVACY = '/privacy';
+
 }

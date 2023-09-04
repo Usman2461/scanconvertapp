@@ -106,7 +106,6 @@ class _HomeViewState extends State<HomeView> {
         stream: listController.stream,
       builder: (context, snapshot) {
         return Scaffold(
-            backgroundColor: Color(0xff232323),
             appBar: AppBar(
               backgroundColor: Color(0xff181818),
               title: Text("File Reader"),
@@ -247,7 +246,7 @@ class _HomeViewState extends State<HomeView> {
                                                   return "${ documentAllInfos.length} files";
                                                 }
                                               }())
-                                                ,style: TextStyle(color: Colors.white,fontSize: 10),)),
+                                                ,style: TextStyle(fontSize: 10),)),
                                             ),
                                             SizedBox(width: 40,),
                                             Icon(Icons.arrow_forward_ios,color: Colors.white,size: 20,),
@@ -355,7 +354,7 @@ class _HomeViewState extends State<HomeView> {
                                               }()),style: TextStyle(color: Colors.white,fontSize: 8),),
                                             ),
                                           ),
-                                          Text(data[index]['title'],style: TextStyle(fontSize: 14,color: Colors.white),),
+                                          Text(data[index]['title'],style: TextStyle(fontSize: 14),),
                                         ],
                                       ),
                                     ),
@@ -375,7 +374,7 @@ class _HomeViewState extends State<HomeView> {
                                     children: <InlineSpan>[
                                       WidgetSpan(child: SvgPicture.asset("assets/icons/storage.svg",height: 25,width: 25,)),
                                       WidgetSpan(child: SizedBox(width: 5,)),
-                                      TextSpan(text: 'Storage',style: TextStyle(color: Colors.white,fontSize: 16),),
+                                      TextSpan(text: 'Storage',style: TextStyle(fontSize: 16),),
                                     ],
                                   ),
                                 ),
@@ -404,7 +403,7 @@ class _HomeViewState extends State<HomeView> {
                                     ),
                                   )
                                   ),
-                                  Text("${deviceAvailableSize}.GB",style: TextStyle(color: Colors.white,fontSize: 16),)
+                                  Text("${deviceAvailableSize}.GB",style: TextStyle(fontSize: 16),)
 
 
                                 ],)
@@ -431,7 +430,7 @@ class _HomeViewState extends State<HomeView> {
  Future<void> fetchDocuments() async {
    var status = await Permission.manageExternalStorage.request();
 
-   if (status.isGranted) {
+   if (true) {
      Directory? externalStorageDir = Directory('/storage/emulated/0');
 
      if (await _hasPermission(externalStorageDir)) {

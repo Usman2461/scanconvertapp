@@ -4,17 +4,17 @@ class DarkThemeColors
 {
   //dark swatch
   static const Color primaryColor = Color(0xFF40DF9F);
-  static const Color primaryColorLight = Color(0xFF0D1F29);
-  static const Color primaryColorDark = Color(0xFF1A3848);
+  static const Color primaryColorLight = Color(0xff232323);
+  static const Color primaryColorDark = Color(0xff232323);
   static const Color accentColor = Color(0xFFFF324B);
   static const Color canvasColor = Color(0xFF172C38);
   //static const Color accentColor = Color(0xFFD9EDE1);
 
   //Appbar
-  static const Color appbarColor = Colors.transparent;
+  static const Color appbarColor = Color(0xff181818);
 
   //SCAFFOLD
-  static const Color scaffoldBackgroundColor = Color(0xFF0D1F29);
+  static const Color scaffoldBackgroundColor = Color(0xff232323);
   static const Color backgroundColor = Color(0xFF172C38);
   static const Color dividerColor = Color(0xFF203744);
   static const Color cardColor = Color(0xFF1A3848);
@@ -32,7 +32,7 @@ class DarkThemeColors
   static const Color buttonDisabledTextColor = Colors.black;
 
   //TEXT
-  static const Color bodyTextColor = Color(0xFF617986);
+  static const Color bodyTextColor = Colors.white;
   static const Color headlinesTextColor = Colors.white;
   static const Color captionTextColor = Colors.black;
   static const Color hintTextColor = Color(0xFF617986);

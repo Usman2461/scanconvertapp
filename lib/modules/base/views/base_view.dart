@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../../utils/constants.dart';
+import '../../../config/translations/strings_enum.dart';
 import '../../home/views/home_view.dart';
 import '../../recent/views/recent_view.dart';
 import '../../scanner/views/scanner_view.dart';
@@ -55,23 +56,23 @@ class _BaseViewState extends State<BaseView> {
           _mBottomNavItem(
             height: 21,
             width: 25,
-            label: 'Converter',
+            label: Strings.converter.tr,
             icon: Constants.converterIcon,
           ),
           _mBottomNavItem(
-            label: 'Scanner',
+            label: Strings.scanner.tr,
             icon: Constants.scannerIcon,
           ),
           _mBottomNavItem(
-            label: 'Home',
+            label: Strings.home.tr,
             icon: Constants.homeNewIcon,
           ),
           _mBottomNavItem(
-            label: 'Recent',
+            label: Strings.recents.tr,
             icon: Constants.recentIcon,
           ),
           _mBottomNavItem(
-            label: 'Settings',
+            label: Strings.settings.tr,
             icon: Constants.settingsIcon,
           ),
         ],

@@ -10,7 +10,6 @@ import 'config/translations/localization_service.dart';
 Future<void> main() async {
   // wait for bindings
   WidgetsFlutterBinding.ensureInitialized();
-
   // init shared preference
   await MySharedPref.init();
 
@@ -23,7 +22,7 @@ Future<void> main() async {
       rebuildFactor: (old, data) => true,
       builder: (context, widget) {
         return GetMaterialApp(
-          title: "Grocery App",
+          title: "Adv Converter",
           useInheritedMediaQuery: true,
           debugShowCheckedModeBanner: false,
           builder: (context,widget) {
