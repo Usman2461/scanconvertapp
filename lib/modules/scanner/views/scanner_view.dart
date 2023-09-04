@@ -57,44 +57,58 @@ class _ScannerViewState extends State<ScannerView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('File Scanner'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          if (_scannedDocument != null || _scannedImage != null) ...[
-            if (_scannedImage != null)
-              Image.file(_scannedImage!,
-                  width: 300, height: 300, fit: BoxFit.contain),
-            if (_scannedDocument != null)
-              Expanded(
-                  child: PDFViewer(
-                    document: _scannedDocument!,
-                  )),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                  _scannedDocumentFile?.path ?? _scannedImage?.path ?? ''),
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('File Scanner'),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            if (_scannedDocument != null || _scannedImage != null) ...[
+              if (_scannedImage != null)
+                Image.file(_scannedImage!,
+                    width: 300, height: 300, fit: BoxFit.contain),
+              if (_scannedDocument != null)
+                Expanded(
+                    child: PDFViewer(
+                      document: _scannedDocument!,
+                    )),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                    _scannedDocumentFile?.path ?? _scannedImage?.path ?? ''),
+              ),
+            ],
+            Center(
+              child: Builder(builder: (context) {
+                return ElevatedButton(
+                    onPressed: () => openPdfScanner(context),
+                    child: Text("PDF Scan"));
+              }),
             ),
+            Center(
+              child: Builder(builder: (context) {
+                return ElevatedButton(
+                    onPressed: () => openImageScanner(context),
+                    child: Text("Image Scan"));
+              }),
+            )
           ],
-          Center(
-            child: Builder(builder: (context) {
-              return ElevatedButton(
-                  onPressed: () => openPdfScanner(context),
-                  child: Text("PDF Scan"));
-            }),
-          ),
-          Center(
-            child: Builder(builder: (context) {
-              return ElevatedButton(
-                  onPressed: () => openImageScanner(context),
-                  child: Text("Image Scan"));
-            }),
-          )
-        ],
+        ),
+        bottomNavigationBar: TabBar(
+          labelStyle: TextStyle(fontSize: 8),
+          indicatorPadding: EdgeInsets.symmetric(horizontal: 4.0),
+          tabs: [
+            Tab(text: 'ACTIONS',),
+            Tab(text: 'DOCUMENT'),
+            Tab(text: 'WHITEBOARD'),
+            Tab(text: 'BUSINESS CARD'),
+            Tab(text: 'PHOTO'),
+          ],
+        ),
       ),
     );
   }
