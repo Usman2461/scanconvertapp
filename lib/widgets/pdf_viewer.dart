@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_full_pdf_viewer_null_safe/full_pdf_viewer_scaffold.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:flutter_file_view/flutter_file_view.dart';
@@ -12,7 +13,7 @@ class PDFViewerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(controller.keyName);
-    return Scaffold(
+    return PDFViewerScaffold(
       appBar: AppBar(title: const Text('PDF Reader')),
       // body: Column(
       //   children: <Widget>[
@@ -36,9 +37,7 @@ class PDFViewerPage extends StatelessWidget {
       //     ),
       //   ],
       // ),
-      body: PDFView(
-        filePath: pdfPath,
-      ),
+      path: pdfPath,
     );
   }
 }

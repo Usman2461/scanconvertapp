@@ -11,7 +11,7 @@ import '../../../widgets/pdf_viewer.dart';
 import '../../base/models/document_model.dart';
 
 
-class showAllFiles extends StatefulWidget {    
+class showAllFiles extends StatefulWidget {
   showAllFiles({super.key,required this.documentList,this.title=""});
   String title;
   @override
@@ -199,6 +199,7 @@ class _DocumentViewerState extends State<showAllFiles> {
                 controller = FileViewController.file(
                     File(widget.documentList[index].path),
                 );
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(

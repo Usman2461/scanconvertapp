@@ -57,6 +57,7 @@ dependencies:
   document_scanner_flutter: ^0.2.7
   intl: ^0.18.1
   advance_pdf_viewer2: ^2.0.4
+  flutter_full_pdf_viewer_null_safe: ^1.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
